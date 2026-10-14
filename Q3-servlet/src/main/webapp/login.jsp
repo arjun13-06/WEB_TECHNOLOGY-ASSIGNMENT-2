@@ -1,0 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Portal Login</title><link rel="stylesheet" href="style.css"></head><body><main class="login card"><h1>Student Portal</h1><p>Sign in to view student records.</p>
+<% if (request.getAttribute("error") != null) { %><p class="error"><%= request.getAttribute("error") %></p><% } %>
+<form method="post" action="login"><label>Username<input name="username" required autocomplete="username"></label><label>Password<input name="password" type="password" required autocomplete="current-password"></label><button type="submit">Log in</button></form><p class="hint">Demo login: student / Student@123</p></main></body></html>
